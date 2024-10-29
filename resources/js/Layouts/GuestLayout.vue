@@ -1,22 +1,48 @@
+
 <script setup>
-import ApplicationLogo from '@/Components/ApplicationLogo.vue';
-import { Link } from '@inertiajs/vue3';
+import Header from "@/Components/Header/Header.vue";
 </script>
 
 <template>
-    <div
-        class="flex min-h-screen flex-col items-center bg-gray-100 pt-6 sm:justify-center sm:pt-0"
-    >
-        <div>
-            <Link href="/">
-                <ApplicationLogo class="h-20 w-20 fill-current text-gray-500" />
-            </Link>
-        </div>
+    <div class="container-prinicipal">
+        <!-- Header Component -->
+        <Header />
 
-        <div
-            class="mt-6 w-full overflow-hidden bg-white px-6 py-4 shadow-md sm:max-w-md sm:rounded-lg"
-        >
-            <slot />
-        </div>
+        <main class="d-flex flex-column min-vh-100 align-items-center bg-light">
+            <!-- Main Content Slot -->
+            <div class="w-100 bg-white shadow-sm rounded">
+                <slot />
+            </div>
+        </main>
+
+        <!-- Footer Component -->
     </div>
 </template>
+
+
+<style setup>
+:root {
+    --poppins: "Poppins", sans-serif;
+    --raleway: "Raleway", sans-serif;
+
+    /* COLORES */
+    --red: #D60D0D;
+    --black: #222222;
+    --white: #fff;
+    --whitev2: #EDEDED;
+
+}
+
+
+
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--poppins) !important;
+}
+
+body {
+    font-family: var(--raleway) !important;
+}
+
+</style>
