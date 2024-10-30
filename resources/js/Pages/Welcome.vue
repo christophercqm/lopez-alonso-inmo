@@ -9,6 +9,9 @@ import NuestraVision from "@/Components/Home/NuestraVision.vue";
 import Banner from "@/Components/Home/Banner.vue";
 import ServiciosGestion from "@/Components/Home/ServiciosGestion.vue";
 import Colaboradores from "@/Components/Home/Colaboradores.vue";
+import Asesoramiento from "@/Components/Home/Asesoramiento.vue";
+import BlogActualidad from "@/Components/Home/BlogActualidad.vue";
+import Resenias from "@/Components/Home/Resenias.vue";
 </script>
 
 <template>
@@ -46,6 +49,10 @@ import Colaboradores from "@/Components/Home/Colaboradores.vue";
 
         <ServiciosGestion></ServiciosGestion>
         <Colaboradores></Colaboradores>
+
+        <BlogActualidad></BlogActualidad>
+        <Resenias></Resenias>
+        <Asesoramiento></Asesoramiento>
     </GuestLayout>
 </template>
 

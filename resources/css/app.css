@@ -1,6 +1,6 @@
 :root {
-    --poppins: "Poppins, sans-serif";
-    --raleway: "Raleway, sans-serif";
+    --poppins: "Poppins", sans-serif;
+    --raleway: "Raleway", sans-serif;
 
     /* COLORES */
     --red: #D60D0D;

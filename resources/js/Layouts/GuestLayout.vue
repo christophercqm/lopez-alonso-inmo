@@ -76,6 +76,11 @@ p {
     margin-right: auto !important;
 }
 
+.red {
+    color: var(--red);
+    font-weight: 500;
+}
+
 .padding-y {
     padding-top: 100px !important;
     padding-bottom: 100px !important;
@@ -90,6 +95,31 @@ p {
     background-color: #D60D0D;
     opacity: .55;
     z-index: 1; 
+}
+
+.button-wrap.button{
+    text-decoration: none;
+    color: var(--black);
+    border: 1px solid var(--red) !important;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: .3s ease-in;
+}
+
+.button-wrap.button:hover {
+    color: var(--white);
+    background-color: var(--red);
+    border: 1px solid var(--red) !important;
+    font-size: 15px;
+}
+
+.poppins {
+    font-family: var(--poppins);
+}
+
+.raleway {
+    font-family: var(--raleway);
 }
 
 </style>
