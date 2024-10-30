@@ -11,7 +11,7 @@
       id="widget2"
       style="width: 1903px; height: 1070.44px;"
     ></iframe>
-    <div class="overlay" :style="{ opacity: overlayOpacity }"></div>
+    <div class="overlay-video" :style="{ opacity: overlayOpacity }"></div>
   </div>
 </template>
 
@@ -49,7 +49,7 @@ const props = defineProps({
   border: none; /* Elimina el borde del iframe */
 }
 
-.overlay {
+.overlay-video {
   position: absolute;
   top: 0;
   left: 0;

@@ -1,6 +1,14 @@
 <script setup>
 import GuestLayout from "@/Layouts/GuestLayout.vue";
 import VideoPlayer from "@/Components/VideoPlayer/VideoPlayer.vue";
+
+import Separator from "@/Components/Separator.vue";
+import InfoAlonso from "@/Components/Home/InfoAlonso.vue";
+import Contador from "@/Components/Home/Contador.vue";
+import NuestraVision from "@/Components/Home/NuestraVision.vue";
+import Banner from "@/Components/Home/Banner.vue";
+import ServiciosGestion from "@/Components/Home/ServiciosGestion.vue";
+import Colaboradores from "@/Components/Home/Colaboradores.vue";
 </script>
 
 <template>
@@ -20,11 +28,24 @@ import VideoPlayer from "@/Components/VideoPlayer/VideoPlayer.vue";
                     Nos dedicamos a encontrar ese lugar perfecto, donde cada
                     rincón refleja tu esencia y cada espacio habla de futuro.
                 </p>
-                <a class="custom-button text-center btn btn-primary mx-auto" href="#primer_elemento">
-                    <span class="button-text text-center ">Sigue leyendo</span>
+                <a class="btn btn-transparent" href="#primer_elemento">
+                    <span>Sigue leyendo</span>
                 </a>
             </div>
         </div>
+
+        <Separator></Separator>
+
+        <InfoAlonso></InfoAlonso>
+
+        <Contador></Contador>
+
+        <NuestraVision></NuestraVision>
+        <Banner></Banner>
+        <h2 class="max-width padding-y">Bloque para las propiedades destacadas</h2>
+
+        <ServiciosGestion></ServiciosGestion>
+        <Colaboradores></Colaboradores>
     </GuestLayout>
 </template>
 
@@ -60,4 +81,7 @@ import VideoPlayer from "@/Components/VideoPlayer/VideoPlayer.vue";
     color: var(--whitev2);
 }
 
+
+
 </style>
+
