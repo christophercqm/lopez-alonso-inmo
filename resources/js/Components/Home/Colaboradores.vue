@@ -1,5 +1,5 @@
 <template>
-    <section class="custom-section">
+    <section class="custom-section padding-y">
         <div class="custom-background-overlay"></div>
         <div class="custom-shape-top">
             <svg
@@ -10,15 +10,17 @@
                 <path
                     class="custom-shape-fill"
                     d="M0 0L2600 0 2600 69.1 0 0z"
+                    style="fill: #fff; transform-origin: center; transform: rotateY(0deg);"
+
                 ></path>
                 <path
                     class="custom-shape-fill"
-                    style="opacity: 0.5"
+                    style="opacity: 0.5; fill: #fff; transform-origin: center; transform: rotateY(0deg);"
                     d="M0 0L2600 0 2600 69.1 0 69.1z"
                 ></path>
                 <path
                     class="custom-shape-fill"
-                    style="opacity: 0.25"
+                    style="opacity: 0.25; fill: #fff; transform-origin: center; transform: rotateY(0deg);"
                     d="M2600 0L0 0 0 130.1 2600 69.1z"
                 ></path>
             </svg>
@@ -32,15 +34,17 @@
                 <path
                     class="custom-shape-fill"
                     d="M0 0L2600 0 2600 69.1 0 0z"
+                    style="fill: #fff; transform-origin: center; transform: rotateY(0deg);"
                 ></path>
                 <path
                     class="custom-shape-fill"
-                    style="opacity: 0.5"
                     d="M0 0L2600 0 2600 69.1 0 69.1z"
+                    style="opacity: 0.5; fill: #fff; transform-origin: center; transform: rotateY(0deg);"
+
                 ></path>
                 <path
                     class="custom-shape-fill"
-                    style="opacity: 0.25"
+                    style="opacity: 0.25; fill: #fff; transform-origin: center; transform: rotateY(0deg);"
                     d="M2600 0L0 0 0 130.1 2600 69.1z"
                 ></path>
             </svg>
@@ -55,7 +59,7 @@
                     nos asociamos, a profesionales que nos garantizan un trabajo
                     excelente.&nbsp;
                 </p>
-                <section class="custom-inner-section padding-y">
+                <section class="custom-inner-section">
                     <div class="custom-row row max-width">
                         <div class="col d-flex justify-content-between flex-wrap">
                             <div
@@ -110,18 +114,14 @@ const logos = ref([
 <style scoped>
 .custom-section {
     position: relative;
+    background-color: #E6E6E6;
 }
 
 .custom-background-overlay {
     /* Estilos para la superposición de fondo */
 }
 
-.custom-shape-top,
-.custom-shape-bottom {
-    position: absolute;
-    left: 0;
-    right: 0;
-}
+
 
 .custom-container {
     padding: 50px 0;
@@ -155,5 +155,45 @@ const logos = ref([
     font-size: 3rem;
     font-weight: 400;
     color: var(--red);
+}
+
+
+.custom-shape-top {
+    top: -1px;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    direction: ltr;
+}
+
+.custom-shape-top svg{
+    height: 71px;
+    width: calc(100% + 1.3px);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.custom-shape-bottom {
+    bottom: -1px;
+    overflow: hidden;
+    width: 100%;
+    line-height: 0;
+    direction: ltr;
+    transform: rotate(180deg);
+    bottom: -1px;
+    position: absolute;
+}
+
+.custom-shape-bottom svg {
+    height: 71px;
+    z-index: -1;
+    width: calc(100% + 1.3px);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
 }
 </style>

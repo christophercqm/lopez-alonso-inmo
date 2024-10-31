@@ -1,7 +1,9 @@
 <script setup>
+import { onMounted, ref } from "vue";
+
+// Importar componentes usados en el template
 import GuestLayout from "@/Layouts/GuestLayout.vue";
 import VideoPlayer from "@/Components/VideoPlayer/VideoPlayer.vue";
-
 import Separator from "@/Components/Separator.vue";
 import InfoAlonso from "@/Components/Home/InfoAlonso.vue";
 import Contador from "@/Components/Home/Contador.vue";
@@ -12,12 +14,39 @@ import Colaboradores from "@/Components/Home/Colaboradores.vue";
 import Asesoramiento from "@/Components/Home/Asesoramiento.vue";
 import BlogActualidad from "@/Components/Home/BlogActualidad.vue";
 import Resenias from "@/Components/Home/Resenias.vue";
+
+// Variables reactivas para almacenar la información del backend
+const dataFromBackend = ref({});
+const isLoading = ref(true); // Estado de carga
+
+onMounted(() => {
+    // Verifica si el elemento con los datos JSON generados por PHP existe
+    const phpDataElement = document.getElementById('php-data');
+    
+    if (phpDataElement) {
+        const jsonText = phpDataElement.textContent;
+
+        try {
+            // Analiza el JSON y almacénalo en dataFromBackend
+            dataFromBackend.value = JSON.parse(jsonText);
+            console.log("Datos cargados desde PHP:", dataFromBackend.value);
+            console.log("Datos cargados desde PHP:", JSON.parse(JSON.stringify(dataFromBackend.value)));
+
+        } catch (error) {
+            console.error("Error al analizar los datos JSON:", error);
+        }
+    } else {
+        console.error("Elemento 'php-data' no encontrado en el DOM.");
+    }
+    isLoading.value = false; // Cambiar a falso una vez que los datos estén cargados
+});
 </script>
 
 <template>
     <GuestLayout>
         <VideoPlayer videoId="gWTtOMnlpJc" videoTitle="House 2" />
         <div class="container-home">
+            
             <div
                 class="contain-info-home d-flex flex-column"
             >
