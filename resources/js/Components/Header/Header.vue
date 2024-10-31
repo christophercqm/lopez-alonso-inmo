@@ -72,7 +72,7 @@ import { Link } from "@inertiajs/vue3";
                             <Link href="/blog" class="nav-link">Blog</Link>
                         </li>
                         <li class="nav-item">
-                            <Link href="/contact" class="nav-link"
+                            <Link href="/contacto" class="nav-link"
                                 >Contacto</Link
                             >
                         </li>

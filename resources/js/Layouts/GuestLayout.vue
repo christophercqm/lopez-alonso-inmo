@@ -36,8 +36,23 @@ import Footer from "@/Components/Footer/Footer.vue";
 
 }
 
+.subtitle-section {
+    color: var(--red);
+    font-family: "Poppins", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
 
+.title-section {
+    color: #222222;
+    font-family: "Poppins", Sans-serif;
+    font-size: 3rem;
+    font-weight: 400
+}
 
+.text-15 {
+    font-size: 15px !important;
+}
 
 
 h1,h2,h3,h4,h5,h6 {
@@ -68,7 +83,26 @@ p {
     border: 1px solid var(--red) !important;
 }
 
-.btn-public {}
+.btn-public {
+    width: max-content;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border: 1px solid var(--red) !important;
+    color: var(--white) !important;
+    padding: .6rem 1.5rem;
+    transition: .5s ease;
+    font-weight: 500;
+    font-size: 1rem !important;
+    transition: background-color 0.5s, border 0.5s, color 0.5s, box-shadow 0.5s; /* Transición suave */
+
+}
+
+.btn-public:hover {
+    background-color: var(--white) !important;
+    border: 1px solid var(--white) !important;
+    color: var(--red) !important;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3), 0 1px 3px rgba(255, 0, 0, 0.2); /* Sombra ultra ligera alrededor */
+}
 
 .max-width {
     max-width: 1250px !important;

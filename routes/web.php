@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InmovillaController;
@@ -7,7 +8,10 @@ use App\Http\Controllers\InmovillaController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+
+// Vistas Públicas
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/contacto', [ContactoController::class, 'index'])->name('home');
 
 Route::get('/inmovilla', [InmovillaController::class, 'index'])->name('inmovilla.index');
 
